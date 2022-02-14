@@ -53,6 +53,10 @@ li{
     margin-left: 10px;
     background-color: #F6F2D4;
 }
+/* Animaciones-transformaciones-transiciones */
+.menu:hover{
+    transform: scaleY(2);
+}
 /* Mobile Header small */
 
 @media screen and (min-width:250px) and (max-width:750px){
@@ -328,6 +332,7 @@ table {
    flex-direction: row;
    width: 30%;
    padding-bottom: 20px;
+   transition: width 2s, height 4s;
 } 
 .grid-containercursos{
     display: grid;
@@ -342,6 +347,11 @@ table {
     justify-content: space-around;
     align-content: center;
 }
+/* Animaciones-transformaciones-transiciones */
+.imagenes-cursos:hover{
+    width: 35%;
+}
+
 /* Mobile Cursos Small*/
 @media  screen and (min-width:300px) and (max-width:480px) {
     .contenedor-cursos{
