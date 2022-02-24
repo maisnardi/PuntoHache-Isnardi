@@ -1,0 +1,15 @@
+/* Extends */
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%grid-center{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+%centrado{
+    margin: 0 auto;
+}

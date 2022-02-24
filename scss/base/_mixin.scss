@@ -1,0 +1,14 @@
+/* Mixin */
+
+@mixin flexible($dis , $direccion , $corte , $just , $align) {
+    display: $dis;
+    flex-flow: $direccion $corte;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin gridmix($dis, $just, $align) {
+    display: $dis;
+    justify-items: $just;
+    align-items: $align;
+}
