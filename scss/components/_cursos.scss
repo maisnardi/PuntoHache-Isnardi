@@ -3,93 +3,77 @@
 @import '../base/variables';
 @import '../base/extends';
 @import '../base/mixin';
+@import '../base/maps';
 
-.titulos-cursos{
-    font-family:nth($fonts, 1), nth($fonts,2);
-    font-size: nth($size, 5);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
+.grid-containercursos{
+    @include gridmix(grid,center,start);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    .titulos-cursos{
+        font-family:nth($fonts, 1), nth($fonts,2);
+        font-size: nth($size, 5);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+
+        @media  screen and (min-width:300px) and (max-width:480px) {
+            font-size: var($tamaño-mobilesmall);
+            text-align: center;
+        }
+        @media  screen and (min-width:481px) and (max-width:900px) {
+            font-size: var($tamaño-mobilesmall);
+            text-align: center;
+        }
+    }
+    .tabla-cursos{
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid nth($colores, 2);
+        border-spacing: 0;
+        background-color:nth($colores, 4);
+        color: nth($colores ,3);
+        font-family:nth($fonts, 1), nth($fonts,2);
+        
+        .titulos-tablas{
+            text-align: center;
+            width: 25%;
+            vertical-align: top;
+            border: 1px solid nth($colores, 6);
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        @media  screen and (min-width:300px) and (max-width:480px) {
+            font-size: 10px;
+        }
+    }   
 }
-.titulos-tablas{
-    text-align: center;
-}
-table {
-    width: 90%;
-    margin: 0 auto;
-    border: 1px solid nth($colores, 2);
-    border-spacing: 0;
-    background-color:nth($colores, 4);
-    color: nth($colores ,3);
-    font-family:nth($fonts, 1), nth($fonts,2);
- }
- th, td {
+td{
     width: 25%;
     text-align: left;
     vertical-align: top;
     border: 1px solid nth($colores, 6);
     border-collapse: collapse;
     padding: 10px;
- }
+}
 
-.grid-containercursos{
-    @include gridmix(grid,center,start);
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-}
-.contenedor-cursos{
-    @include flexible(flex, row, wrap, space-around, center);
-}
- .contenedor-carousel{
+.contenedor-carousel{
     max-width: 40%;
     height: auto;
     margin: auto;
     padding:30px 0;
-}
-.imagen-nosotros{
-    img{
-        padding-left: 10px;
-    }
-}
 
-/* Mobile Cursos Small*/
-@media  screen and (min-width:300px) and (max-width:480px) {
-    .contenedor-cursos{
-        @include flexible(flex, column, nowrap, flex-start, stretch);
-    }
-    .titulos-cursos{
-        font-size: var($tamaño-mobilesmall);
-        text-align: center;
-    }
-    .imagenes-cursos{
-        width: 60%;
-        height: auto;
-    }
-    table {
-        font-size: 10px;
-    }
-    .imagenes-cursos{
-        width: 90%;
-    }
-    .contenedor-carousel{
+    @media  screen and (min-width:300px) and (max-width:480px) {
         max-width: 90%;
         height: auto;
         margin: auto;
         padding:30px 0;
     }
-}
-/* Mobile Cursos Medium */
-
-@media  screen and (min-width:481px) and (max-width:900px) {
-    .titulos-cursos{
-        font-size: var($tamaño-mobilesmall);
-        text-align: center;
-    }
-    .contenedor-carousel{
+    @media  screen and (min-width:481px) and (max-width:900px) {
         max-width: 90%;
         height: auto;
         margin: auto;
         padding:30px 0;
-    }
+    } 
 }
+
 /*Fin de Cursos.html*/

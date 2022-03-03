@@ -3,29 +3,67 @@
 @import '../base/variables';
 @import '../base/extends';
 @import '../base/mixin';
+@import '../base/maps';
 /* Inicio Contacto */
 
-.texto-contacto{
-    font-family: nth($fonts, 1), nth($fonts,2);
-    font-size:nth($size ,3);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-}
-#logos-contacto{
-    padding-left: 20px;
-}
-.formulario-contacto{
-    margin-top: 15px;
-    padding: 20px;
-    background-color:nth($colores,3);
-    border:2px solid nth($colores,7);
-}
-.container-contacto{
-    margin-bottom: 10px;
-}
-@media screen and (min-width:250px) and (max-width:850px) {
-    .row{
-        @include flexible (flex, column, nowrap,flex-start,stretch)
+main{
+    section{
+        margin-bottom: 10px;
+        div{
+            div{
+                form{
+                    margin-top: 15px;
+                    padding: 20px;
+                    background-color:nth($colores,3);
+                    border:2px solid nth($colores,7);
+                }
+            }
+            div{
+                h3{
+                    font-family: nth($fonts, 1), nth($fonts,2);
+                    font-size:nth($size ,3);
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 20px;
+                }
+                p{
+                    font-family: nth($fonts, 1), nth($fonts,2);
+                    font-size:nth($size ,3);
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 20px;
+                }
+                h3{
+                    font-family: nth($fonts, 1), nth($fonts,2);
+                    font-size:nth($size ,3);
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 20px;
+                }
+                p{
+                    font-family: nth($fonts, 1), nth($fonts,2);
+                    font-size:nth($size ,3);
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 20px;
+                }
+                h3{
+                    font-family: nth($fonts, 1), nth($fonts,2);
+                    font-size:nth($size ,3);
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 20px;
+                }
+                #logos-contacto{
+                    padding-left: 20px;
+                }
+            }
+            @media screen and (min-width:250px) and (max-width:850px) {
+                    @include flexible (flex, column, nowrap,flex-start,stretch)
+                }
+            
+        }
     }
 }
+
+/* Fin Contato */

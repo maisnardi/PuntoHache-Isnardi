@@ -3,39 +3,46 @@
 @import '../base/variables';
 @import '../base/extends';
 @import '../base/mixin';
+@import '../base/maps';
 /* Inicio Header */
+
 header{
     font-family: nth($fonts, 1), nth($fonts,2);
     border-bottom: 10px solid nth($colores , 2);
+    .fondo-nav{
+        background-color:nth($colores, 3);
+        .container-fluid{
+            .navbar-collapse{
+                .navbar-nav{
+                    position: relative;
+                    padding: 7px 0;
+                    font-size: 1.3rem;
+                    .nav-item{
+                        position: relative;
+                        padding: 7px 0;
+                        font-size: 1.3rem;
+                        padding-left: 10px;
+                        .nav-link{
+                            @media screen and (min-width:250px) and (max-width:750px){
+                                padding-left: 10px;
+                                color: black;
+                                margin-right: 0;
+                                max-width: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        @media screen and (min-width:250px) and (max-width:750px){
+            width: 100%;
+            border-bottom: none;
+        }
+    }
+
 }
-.fondo-nav{
-    background-color:nth($colores, 3);
-}
-.grid-containerheader{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 80px;
-}
-.lista-menu{
-    list-style-type: none;
-    font-size: 20px;
-    display: flex;
-    margin-right: 30px;
-}
-li{
-    padding-left: 10px;
-}
-.imagen-logo{
-    @include flexible (flex, row, nowrap,flex-start,center);
-    margin-left: 10px;
-    background-color: nth($colores,3);
-}
-/* Animaciones-transformaciones-transiciones */
-.navbar-nav .nav-item {
-    position: relative;
-    padding: 7px 0;
-    font-size: 1.3rem;
-}
+
 .navbar-nav .nav-item::after {
     content: '';
     position: absolute;
@@ -50,33 +57,5 @@ li{
     left: 0;
     width: 100%;
 }
-/* Mobile Header small */
-@media screen and (min-width:250px) and (max-width:750px){
-    .grid-containerheader{
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-    }
-    .lista-menu{
-        font-size: 11px;
-    }
-    li a{
-        padding-left: 10px;
-        color: black;
-        margin-right: 0;
-    }
-    .nav-header{
-        background-color: nth($colores,2);
-        justify-content: center;
-    }
-    .imagen-logo{
-        @include flexible(flex,row,nowrap,center, stretch);
-        margin-left: 0;
-    }
-    header{
-        width: 100%;
-        border-bottom: none;
-    }
-   a>img{
-     max-width: 200px;
-   }
-}
+
+/* Fin Header */

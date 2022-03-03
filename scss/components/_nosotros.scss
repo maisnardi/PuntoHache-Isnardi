@@ -4,82 +4,81 @@
 @import '../base/extends';
 @import '../base/mixin';
 
-.texto-nosotros{
-    padding-left: 20px;
-    font-style: italic;
-}
-.imagen-nosotros{
-   padding-bottom: 20px;
-}
-.textos-nosotros{
-    font-family: nth($fonts, 3), nth($fonts, 4);
-    font-size: nth($size, 5);
-    font-weight: 500;
-    padding-right: 100px;
-}
-.titulos-nosotros{
-    font-family: nth($fonts, 1), nth($fonts, 2);
-    font-size: var($tamaño-titulos);
-    font-weight: 500;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    grid-column: 1/3;
-    justify-self:start;
-}
 .grid-containernos{
     @include gridmix(grid,center,center);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
-}
-/* Mobile Nosotros small */
 
-@media screen and (min-width: 300px) and (max-width:499px) {
-    .grid-containernos{
-        display: block;
+    @media screen and (min-width: 500px) and (max-width:900px) {
+            display: block;
+        }
+    .titulos-nosotros{
+        font-family: nth($fonts, 1), nth($fonts, 2);
+        font-size: var($tamaño-titulos);
+        font-weight: 500;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        grid-column: 1/3;
+        justify-self:start;
+
+        @media screen and (min-width: 300px) and (max-width:499px) {
+                @include flexible(flex,row,nowrap,center, stretch);
+                font-size:nth($fonts,3 );
+                padding-left: 0;
+            }
+        @media screen and (min-width: 500px) and (max-width:900px) {
+                display: grid;
+                font-size: 27px;
+                @include flexible(flex,row,nowrap,center, center);
+            }
     }
     .imagen-nosotros{
-        max-width: 90%;
-        height: auto;
-        padding-bottom: 5px;
-        margin:auto
+        padding-bottom: 20px;
+        padding-left: 10px;
+        @media screen and (min-width: 300px) and (max-width:499px) {
+                max-width: 90%;
+                height: auto;
+                padding-bottom: 5px;
+                margin:auto
+            }
+        @media screen and (min-width: 500px) and (max-width:900px) {
+                max-width: 70%;
+                height: auto;
+                margin:auto;
+                @include flexible(flex,row,nowrap,center, center);
+            }
     }
-    .titulos-nosotros{
-        @include flexible(flex,row,nowrap,center, stretch);
-        font-size:nth($fonts,3 );
-        padding-left: 0;
-    }
-    .textos-nosotros{
-        display: flex;
-        font-size: nth($size, 3);
-        padding-bottom: 10px;
-        text-align: center;
-        padding-left: 50px;
-    }
-}
-/* Mobile Nosotros medium */
+    .texto-nosotros{
+        padding-left: 20px;
+        font-style: italic;
+        .textos-nosotros{
+            font-family: nth($fonts, 3), nth($fonts, 4);
+            font-size: nth($size, 5);
+            font-weight: 500;
+            padding-right: 100px;
+            @media screen and (min-width: 300px) and (max-width:499px) {
+                    display: flex;
+                    font-size: nth($size, 3);
+                    padding-bottom: 10px;
+                    text-align: center;
+                    padding-left: 50px;
+                }
+            @media screen and (min-width: 500px) and (max-width:900px) {
+                    font-size: nth($size ,3);
+                    padding-bottom: 10px;
+                    text-align: justify;
+                    padding-left: 70px;
+                }
+        }
+        @media screen and (min-width: 500px) and (max-width:900px) {
+                @include flexible(flex,row,nowrap,center, center);
+            }
 
-@media screen and (min-width: 500px) and (max-width:900px) {
-    .grid-containernos{
-        display: block;
     }
-    .imagen-nosotros{
-        max-width: 70%;
-        height: auto;
-        margin:auto
-    }
-    .titulos-nosotros{
-        display: grid;
-        font-size: 27px;
-    }
-    .textos-nosotros{
-        font-size: nth($size ,3);
-        padding-bottom: 10px;
-        text-align: justify;
-        padding-left: 70px;
-    }
-    .grid-itemnos{
-        @include flexible(flex,row,nowrap,center, center);
-    }
+    @media screen and (min-width: 300px) and (max-width:499px) {
+            display: block;
+        }
 }
+
 /* Fin Nosotros.html */

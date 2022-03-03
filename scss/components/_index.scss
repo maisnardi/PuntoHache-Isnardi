@@ -3,119 +3,116 @@
 @import '../base/variables';
 @import '../base/extends';
 @import '../base/mixin';
+@import '../base/maps';
 
 body{
     background-color:nth($colores , 1);
-}
-/* Main */
-h1{
-    font-family:nth($fonts, 1), nth($fonts,2);
-    font-size: var($tamaño-titulos);
-    font-weight: 500;
-    padding-left: 20px;
-    margin: 30px 0px;
-}
-.textos-index{
-    padding-left: 20px;
-    font-family:nth($fonts, 1), nth($fonts,2);
-}
-.imagenes-index{
-    max-width: 30%;
-    height: auto;
-}
-.video-index{
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    @extend %flex-center;
-}
-.video-index video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit:cover;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-.container-index1{
-    font-family: nth($fonts, 1), nth($fonts,2);
-    font-size: nth($size ,6);
-    width: 90%;
-    @extend %flex-center;
-    @extend %centrado;
-    grid-column:1/3;
+        main{
+            .grid-containerind{
+                display:grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, auto);
+                    .grid-videoind{
+                        grid-column: 1/3;
+                        .video-index{
+                            width: 100%;
+                            height: auto;
+                            overflow: hidden;
+                            @extend %flex-center;
+                        }
+                        h1{
+                            font-family:nth($fonts, 1), nth($fonts,2);
+                            font-size: var($tamaño-titulos);
+                            font-weight: 500;
+                            padding-left: 20px;
+                            margin: 30px 0px;
+                            @media  screen and (min-width:300px) and (max-width:500px){
+                                    font-size: nth($size ,4);
+                                }
+                        }
+                    }
+            }
+            .container-index1{
+                font-family: nth($fonts, 1), nth($fonts,2);
+                font-size: nth($size ,6);
+                width: 90%;
+                @extend %flex-center;
+                @extend %centrado;
+                grid-column:1/3;
+
+                .imagenes-index{
+                    max-width: 30%;
+                    height: auto;
+                    @media  screen and (min-width:300px) and (max-width:500px){
+                            max-width: 90%;
+                            height: auto;
+                            padding-bottom: 10px;
+                        }
+                    @media  screen and (min-width:501px) and (max-width:700px) {
+                        max-width: 50%;
+                        height: auto;
+                    }
+                }
+                .textos-index{
+                    padding-left: 20px;
+                    font-family:nth($fonts, 1), nth($fonts,2);
+                    @media  screen and (min-width:300px) and (max-width:500px){
+                            font-size: 20px;
+                            padding-bottom: 10px;
+                        }
+                    @media  screen and (min-width:501px) and (max-width:700px) {
+                            font-size: var($tamaño-mobilesmall);
+                        }
+                }
+                @media  screen and (min-width:300px) and (max-width:500px){
+                    @include flexible( flex, column , nowrap , flex-start, stretch);
+                    }
+                @media  screen and (min-width:501px) and (max-width:700px) {
+                    @include flexible( flex, column , nowrap , flex-start, stretch);
+                        width: 100%;
+                    }
+            }
+            .container-index2{
+                font-family: nth($fonts, 1), nth($fonts,2);
+                font-size: nth($size ,6);
+                width: 90%;
+                @extend %flex-center;
+                @extend %centrado;
+                padding-bottom: 20px;
+                grid-column:1/3;
+
+                .textos-index{
+                    padding-left: 20px;
+                    font-family:nth($fonts, 1), nth($fonts,2);
+                    @media  screen and (min-width:300px) and (max-width:500px){
+                            font-size:20px;
+                            padding-bottom: 10px;
+                        }
+                    @media  screen and (min-width:501px) and (max-width:700px) {
+                        font-size: var($tamaño-mobilesmall);
+                        }
+                }
+                .imagenes-index{
+                    max-width: 30%;
+                    height: auto;
+                    @media  screen and (min-width:300px) and (max-width:500px){
+                            max-width: 90%;
+                            height: auto;
+                            padding-bottom: 10px;
+                        }
+                    @media  screen and (min-width:501px) and (max-width:700px) {
+                            max-width: 50%;
+                            height: auto;
+                        }
+                }
+                @media  screen and (min-width:300px) and (max-width:500px){
+                        @include flexible( flex, column-reverse , nowrap , flex-start, stretch);
+                    }
+                @media  screen and (min-width:501px) and (max-width:700px) {
+                    @include flexible( flex, column-reverse , nowrap , flex-start, stretch);
+                    }
+            }
+        }
 }
 
-.container-index2{
-    font-family: nth($fonts, 1), nth($fonts,2);
-    font-size: nth($size ,6);
-    width: 90%;
-    @extend %flex-center;
-    @extend %centrado;
-    padding-bottom: 20px;
-    grid-column:1/3;
-}
-.grid-containerind{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-}
-.grid-videoind{
-    grid-column: 1/3;
-}
-.grid-containerfooter{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-}
-#logo-footer{
-    grid-column: 1/2;
-}
-#direccion{
-    grid-column: 2/3;
-}
-#redes-sociales{
-    grid-column: 3/4;
-}
-/* Mobile Index small */
-
-@media  screen and (min-width:300px) and (max-width:500px){
-    .container-index1{
-        @include flexible( flex, column , nowrap , flex-start, stretch);
-    }
-    .container-index2{
-        @include flexible( flex, column-reverse , nowrap , flex-start, stretch);
-    }
-    .textos-index{
-        font-size: var($tamaño-mobilesmall);
-        padding-bottom: 10px;
-    }
-    .imagenes-index{
-        max-width: 90%;
-        height: auto;
-        padding-bottom: 10px;
-    }
-    h1{
-        font-size: nth($size ,4);
-    }
-}
-/* Mobile Index medium */
-
-@media  screen and (min-width:501px) and (max-width:700px) {
-    .container-index1{
-        @include flexible( flex, column , nowrap , flex-start, stretch);
-        width: 100%; 
-    }
-    .container-index2{
-        @include flexible( flex, column-reverse , nowrap , flex-start, stretch);
-    }
-    .textos-index{
-        font-size: var($tamaño-mobilesmall);
-    }
-    .imagenes-index{
-        max-width: 50%;
-        height: auto;
-    }
-}
 /* Fin main */

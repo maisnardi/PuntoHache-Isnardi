@@ -3,6 +3,7 @@
 @import '../base/variables';
 @import '../base/extends';
 @import '../base/mixin';
+@import '../base/maps';
 
 .grid-containerconsul{
     @include gridmix(grid,start,center);
@@ -11,166 +12,168 @@
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     padding-bottom: 10px;
-}
-.imagenes-consultoria{
-    height: 300px;
-}
-.titulo-consultoria{
-    grid-column: 1/3;
-    grid-row: 1/2;
-    font-family:nth($fonts, 1), nth($fonts,2);
-    font-size: var($tamaño-titulos);
-    padding-top: 10px;
-    padding-left: 20px;
-}
-.imagen-consul1{
-    grid-column: 1/2;
-    grid-row: 2/3;
-    padding-left: 10px;
-}
-.textos-consultoria{
-    font-family: nth($fonts, 1), nth($fonts,2);
-    font-size: nth($size ,5);
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-.imagen-consul2{
-    grid-column: 1/2;
-    grid-row: 3/4;
-    padding-left: 10px;
-}
-.contenedor-consultoria{
-    grid-column: 2/3;
-    grid-row: 3/4;
-    @include flexible( flex, row , nowrap , space-around, stretch);
-    font-family: nth($fonts, 1), nth($fonts,2);
-    font-size: nth($size,4);
-}
-.contenedor-consultoria ul{
-    list-style-type: none;
-}
-.clientes-consultoria{
-    @include flexible (flex,column, nowrap,flex-start,stretch);
-}
-/* Mobile Consultoria Small */
-
-@media screen and (min-width:250px) and (max-width:450px){
-    .grid-containerconsul{
-        @include gridmix(grid,center,center);
-        grid-template-columns:1 fr 1fr;
-        grid-template-rows: repeat(5 auto);
-        grid-row-gap: 5px;
-    }
-    .imagen-consul1{
-        grid-column: 1/2;
-        grid-row: 2/3;
-        padding-left: 3px;
-        width: 140px;
-        height: auto;
-    }
-    .imagen-consul2{
-        grid-column: 2/3;
-        grid-row: 2/3;
-        padding-left: 0;
-        width: 140px;
-        height: auto;
-    }
-    .textos-consultoria{
-        width: 90%;
-        justify-self: center;
-        font-size: 15px;
-        grid-column: 1/3;
-        grid-row: 3/4;
-        padding-top: 10px;
-    }
+    
     .titulo-consultoria{
+        grid-column: 1/3;
+        grid-row: 1/2;
+        font-family:nth($fonts, 1), nth($fonts,2);
+        font-size: var($tamaño-titulos);
+        padding-top: 10px;
+        padding-left: 20px;
+
+        @media screen and (min-width:250px) and (max-width:450px){
         font-size: var($tamaño-mobilesmall);
         justify-self: center;
         grid-column: 1/3;
         grid-row: 1/2;
         padding-top: 10px;
-    }
-    .contenedor-consultoria{
-        @include flexible (flex, column, nowrap,start,stretch);
-        width: 100%;
-        font-size: 15px;
-        grid-column: 1/3;
-        grid-row: 4/5;
-        padding-top: 20px;
-    }
-    .clientes-consultoria{
-        @include flexible (flex, row, nowrap,space-around,stretch);
-        padding-bottom: 20px;
-    }
-    .titulo2-consultoria{
-        padding-left: 15px;
-    }
-}
-/* Mobile Consultoria Medium */
+        }
 
-@media screen and (min-width:451px) and (max-width:650px){
-    .grid-containerconsul{
-        @include gridmix(grid,center,center);
-        grid-template-columns:1 fr 1fr;
-        grid-template-rows: repeat(5 auto);
-        grid-row-gap: 5px;
+        @media screen and (min-width:451px) and (max-width:700px){
+            font-size: var($tamaño-mobilesmall);
+            justify-self: center;
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+        @media screen and (min-width:701px) and (max-width:1000px){
+            font-size: var($tamaño-mobilemedium);
+        }
     }
     .imagen-consul1{
+        height: 300px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding-left: 10px;
+
+        @media screen and (min-width:250px) and (max-width:450px){
+            grid-column: 1/2;
+            grid-row: 2/3;
+            padding-left: 3px;
+            width: 140px;
+            height: auto;
+        }
+        @media screen and (min-width:451px) and (max-width:700px){
         grid-column: 1/2;
         grid-row: 2/3;
         padding-left: 3px;
         width: 200px;
         height: auto;
+        }
+        
     }
-    .imagen-consul2{
+    .textos-consultoria{
+        font-family: nth($fonts, 1), nth($fonts,2);
+        font-size: nth($size ,5);
         grid-column: 2/3;
         grid-row: 2/3;
-        padding-left: 0;
-        width: 200px;
-        height: auto;
-    }
-    .textos-consultoria{
-        @include gridmix(grid,center,stretch);
-        width: 90%;
-        font-size: 20px;
-        grid-column: 1/3;
-        grid-row: 3/4;
-        padding-top: 10px;
-    }
-    .titulo-consultoria{
-        font-size: var($tamaño-mobilesmall);
-        justify-self: center;
-        grid-column: 1/3;
-        grid-row: 1/2;
-    }
-    .contenedor-consultoria{
-        @include flexible (flex, column, nowrap,start,stretch);
-        width: 100%;
-        font-size: 15px;
-        grid-column: 1/3;
-        grid-row: 4/5;
-        padding-top: 20px;
-    }
-    .clientes-consultoria{
-        @include flexible (flex, row, nowrap,space-around,stretch);
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }
-    .titulo2-consultoria{
-        padding-left: 15px;
-    }
-}
-/* Mobile Consultoria Big */
 
-@media screen and (min-width:651px) and (max-width:1000px){
-    .textos-consultoria{
-        font-size: nth($size ,3);
+        @media screen and (min-width:250px) and (max-width:450px){
+            width: 90%;
+            justify-self: center;
+            font-size: 15px;
+            grid-column: 1/3;
+            grid-row: 3/4;
+            padding-top: 10px;
+        }
+
+        @media screen and (min-width:451px) and (max-width:700px){
+            @include gridmix(grid,center,stretch);
+            width: 90%;
+            font-size: 20px;
+            grid-column: 1/3;
+            grid-row: 3/4;
+            padding-top: 10px;
+        }
+        @media screen and (min-width:701px) and (max-width:1000px){
+            font-size: nth($size ,3);
+        }
     }
-    .titulo-consultoria{
-        font-size: var($tamaño-mobilemedium);
+    .imagen-consul2{
+        height: 300px;
+        grid-column: 1/2;
+        grid-row: 3/4;
+        padding-left: 10px;
+
+        @media screen and (min-width:250px) and (max-width:450px){
+            grid-column: 2/3;
+            grid-row: 2/3;
+            padding-left: 0;
+            width: 140px;
+            height: auto;
+        }
+
+        @media screen and (min-width:451px) and (max-width:700px){
+            grid-column: 2/3;
+            grid-row: 2/3;
+            padding-left: 0;
+            width: 200px;
+            height: auto;
+        }
     }
     .contenedor-consultoria{
-        font-size: nth($size ,3);
+        grid-column: 2/3;
+        grid-row: 3/4;
+        @include flexible( flex, row , nowrap , space-around, stretch);
+        font-family: nth($fonts, 1), nth($fonts,2);
+        font-size: nth($size,4);
+
+        @media screen and (min-width:250px) and (max-width:450px){
+        @include flexible (flex, column, nowrap,start,stretch);
+            width: 100%;
+            font-size: 15px;
+            grid-column: 1/3;
+            grid-row: 4/5;
+            padding-top: 20px;
+        }
+
+        @media screen and (min-width:451px) and (max-width:700px){
+            @include flexible (flex, column, nowrap,start,stretch);
+            width: 100%;
+            font-size: 15px;
+            grid-column: 1/3;
+            grid-row: 4/5;
+            padding-top: 20px;
+        }
+        @media screen and (min-width:701px) and (max-width:1000px){
+            font-size: nth($size ,3);
+        }
+        .titulo2-consultoria{
+            @media screen and (min-width:250px) and (max-width:450px){
+                padding-left: 15px;
+            }
+            @media screen and (min-width:451px) and (max-width:700px){
+                padding-left: 15px;
+            }
+        }
+        .clientes-consultoria{
+            list-style-type:none;
+            @include flexible (flex,column, nowrap,flex-start,stretch);
+
+            @media screen and (min-width:250px) and (max-width:450px){
+                @include flexible (flex, row, nowrap,space-around,stretch);
+                padding-bottom: 20px;
+            }
+
+            @media screen and (min-width:451px) and (max-width:700px){
+                @include flexible (flex, row, nowrap,space-around,stretch);
+                padding-top: 10px;
+                padding-bottom: 20px;
+            }
+        }
     }
+        @media screen and (min-width:250px) and (max-width:450px){
+            @include gridmix(grid,center,center);
+            grid-template-columns:1 fr 1fr;
+            grid-template-rows: repeat(5 auto);
+            grid-row-gap: 5px;
+        }
+        @media screen and (min-width:451px) and (max-width:700px){
+            @include gridmix(grid,center,center);
+            grid-template-columns:1 fr 1fr;
+            grid-template-rows: repeat(5 auto);
+            grid-row-gap: 5px;
+        }
+    
 }
+
 /* Fin Consultoria.html */
