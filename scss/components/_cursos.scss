@@ -12,9 +12,9 @@
     .titulos-cursos{
         font-family:nth($fonts, 1), nth($fonts,2);
         font-size: nth($size, 5);
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 20px;
+        padding-top: map-get($padding-20, pd-top);
+        padding-bottom: map-get($padding-20, pd-bot);
+        padding-left: map-get($padding-20, pd-left);
 
         @media  screen and (min-width:300px) and (max-width:480px) {
             font-size: var($tamaño-mobilesmall);
@@ -62,6 +62,14 @@ td{
     margin: auto;
     padding:30px 0;
 
+    .carousel-inner{
+        .carousel-item{
+            img{
+                border-radius: 20px;
+            }
+        }
+    }
+   
     @media  screen and (min-width:300px) and (max-width:480px) {
         max-width: 90%;
         height: auto;
