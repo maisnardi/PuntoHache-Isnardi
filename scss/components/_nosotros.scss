@@ -5,7 +5,7 @@
 @import '../base/mixin';
 @import '../base/maps';
 
-.grid-containernos{
+.grid-containernos{         //contenedor grid de todo el main de nosotros
     @include gridmix(grid,center,center);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
@@ -13,7 +13,7 @@
     @media screen and (min-width: 500px) and (max-width:900px) {
             display: block;
         }
-    .titulos-nosotros{
+    .titulos-nosotros{      //titulo
         font-family: nth($fonts, 1), nth($fonts, 2);
         font-size: var($tamaño-titulos);
         font-weight: map-get($estilo, peso);
@@ -34,7 +34,7 @@
                 @include flexible(flex,row,nowrap,center, center);
             }
     }
-    .imagen-nosotros{
+    .imagen-nosotros{       //imagen
         padding-bottom: 20px;
         padding-left: 10px;
         max-width: 70%;
@@ -54,7 +54,7 @@
                 @include flexible(flex,row,nowrap,center, center);
             }
     }
-    .texto-nosotros{
+    .texto-nosotros{        //texto
         padding-left: 20px;
         font-style: italic;
         .textos-nosotros{

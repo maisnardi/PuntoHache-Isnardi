@@ -5,11 +5,11 @@
 @import '../base/mixin';
 @import '../base/maps';
 
-.grid-containercursos{
+.grid-containercursos{      //contenedor de todo el main de cursos
     @include gridmix(grid,center,start);
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    .titulos-cursos{
+    .titulos-cursos{        //titulo de la página
         font-family:nth($fonts, 1), nth($fonts,2);
         font-size: nth($size, 5);
         padding-top: map-get($padding-20, pd-top);
@@ -25,7 +25,7 @@
             text-align: center;
         }
     }
-    .tabla-cursos{
+    .tabla-cursos{          //tabla de cursos disponibles
         width: 90%;
         margin: 0 auto;
         border: 1px solid nth($colores, 2);
@@ -56,7 +56,7 @@ td{
     padding: 10px;
 }
 
-.contenedor-carousel{
+.contenedor-carousel{       //carousel de 3 imagenes
     max-width: 40%;
     height: auto;
     margin: auto;

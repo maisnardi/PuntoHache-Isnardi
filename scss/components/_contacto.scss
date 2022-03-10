@@ -11,7 +11,7 @@ main{
         margin-bottom: 10px;
         section{
             section{
-                form{
+                form{           //formulario
                     border-radius: 20px;
                     margin-top: 15px;
                     padding: 20px;
@@ -19,7 +19,7 @@ main{
                     border:2px solid nth($colores,7);
                 }
             }
-            section{
+            section{        //textos e infomación
                 h3{
                     font-family: nth($fonts, 1), nth($fonts,2);
                     font-size:nth($size ,3);

@@ -6,17 +6,16 @@
 @import '../base/maps';
 
 body{
-    // background-color:nth($colores , 1);
     background: url("../multimedia/fondo.webp");
 
         main{
-            .grid-containerind{
+            .grid-containerind{         //container grid que maqueta todo el main
                 display:grid;
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(4, auto);
                     .texto-titulo{
                         grid-column: 1/3;
-                        h1{
+                        h1{             // Tituto index
                             font-family:nth($fonts, 1), nth($fonts,2);
                             font-size: var($tamaño-titulos);
                             font-weight: 500;
@@ -27,8 +26,8 @@ body{
                                 }
                         }
                     }
-            }
-            .container-index1{
+            
+            .container-index1{      //conteinter de la primera foto y el primer texto
                 font-family: nth($fonts, 1), nth($fonts,2);
                 font-size: nth($size ,6);
                 width: 90%;
@@ -79,7 +78,7 @@ body{
                     }
             }
 
-            .container-index2{
+            .container-index2{          //conteinter de la segunda foto y el segundo texto
                 font-family: nth($fonts, 1), nth($fonts,2);
                 font-size: nth($size ,6);
                 width: 90%;
@@ -127,7 +126,7 @@ body{
                     @include flexible( flex, column-reverse , nowrap , flex-start, stretch);
                     }
             }
-            .container-videos{
+            .container-videos{          //container de los videos
                 margin-top: 20px;
                 @include flexible(flex,row,nowrap,space-evenly,stretch);
                 .video-index{
@@ -164,7 +163,7 @@ body{
                 }
             }
         } 
-        
+    }  
 }
 
 
