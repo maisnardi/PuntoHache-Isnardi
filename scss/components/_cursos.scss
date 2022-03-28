@@ -6,7 +6,7 @@
 @import '../base/maps';
 
 //Container grid que maqueta todo el main de cursos
-.grid-containercursos{
+.grid-container-cursos{
     @include gridmix(grid,center,start);                //display: grid, justify-items: center, align-items:start
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);

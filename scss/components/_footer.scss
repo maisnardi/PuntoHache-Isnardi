@@ -7,7 +7,7 @@
 
 /* Inicio Footer */
 //contenedor grid footer
-.grid-containerfooter{
+.grid-container-footer{
     background-color: nth($colores ,5);                 //rgba(229, 255, 205, 0.637)
     font-family: nth($fonts, 1), nth($fonts,2);         //'Rubik', sans-serif
     display: grid;
@@ -25,7 +25,7 @@
         }
     }
     //Contenedor flex de dirección
-    .flex-containerfooter{
+    .flex-container-footer{
         display: flex;
         flex-direction: column;
         //Dirección y logo casa
@@ -50,7 +50,7 @@
         }
     }
     //Contenedor flex Redes sociales
-    .flex-containerfooter2{
+    .flex-container-footer2{
         @include flexible(flex, column, nowrap,flex-start, stretch);        //display:flex, flex-flow:column nowrap, justify-content:flex-start, align-items:stretch;
         margin-bottom: 20px;
         //Media queries para todos los dispositivos

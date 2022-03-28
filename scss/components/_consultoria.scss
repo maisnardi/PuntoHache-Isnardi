@@ -6,7 +6,7 @@
 @import '../base/maps';
 
 //Contenedor grid de todo el main de consultoría
-.grid-containerconsul{          
+.grid-container-consul{          
     @include gridmix(grid,start,center);                //display: grid, justify-items:start, align-items:center;
     grid-template-columns:1 1fr;
     grid-template-rows: repeat(3 auto);

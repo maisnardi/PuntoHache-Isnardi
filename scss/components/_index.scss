@@ -10,7 +10,7 @@ body{
 
         main{
             //Container grid que maqueta todo el main del index
-            .grid-containerind{         
+            .grid-container-ind{         
                 display:grid;
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(5, auto);

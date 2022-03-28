@@ -6,7 +6,7 @@
 @import '../base/maps';
 
 //Container grid que maqueta todo el main del nosotros
-.grid-containernos{
+.grid-container-nos{
     @include gridmix(grid,center,center);       //display: grid, justify-items: center, align-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
