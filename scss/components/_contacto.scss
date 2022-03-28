@@ -7,61 +7,55 @@
 /* Inicio Contacto */
 
 main{
-    section{
+    .container-contacto{
         margin-bottom: 10px;
-        section{
-            section{
-                form{           //formulario
+        .row{
+            .col{
+                //Formulario
+                form{           
                     border-radius: 20px;
                     margin-top: 15px;
                     padding: 20px;
-                    background-color:nth($colores,3);
-                    border:2px solid nth($colores,7);
+                    background-color:nth($colores,3);                               //#F6F2D4
+                    border:2px solid nth($colores,7);                               //black
                 }
             }
-            section{        //textos e infomación
+            //Textos e infomación
+            .datos{        
                 h3{
-                    font-family: nth($fonts, 1), nth($fonts,2);
-                    font-size:nth($size ,3);
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    padding-left: 20px;
+                    font-family: nth($fonts, 1), nth($fonts,2);                     //'Rubik', sans-serif;
+                    font-size:nth($size ,3);                                        //20px
+                    @extend %pading-tbl;                                            //padding-top:20px, padding-bottom:20px, padding-left:20px; 
                 }
                 p{
-                    font-family: nth($fonts, 1), nth($fonts,2);
-                    font-size:nth($size ,3);
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    padding-left: 20px;
+                    font-family: nth($fonts, 1), nth($fonts,2);                     //'Rubik', sans-serif;
+                    font-size:nth($size ,3);                                        //20px
+                    @extend %pading-tbl;                                            //padding-top:20px, padding-bottom:20px, padding-left:20px;
                 }
                 h3{
-                    font-family: nth($fonts, 1), nth($fonts,2);
-                    font-size:nth($size ,3);
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    padding-left: 20px;
+                    font-family: nth($fonts, 1), nth($fonts,2);                     //'Rubik', sans-serif;
+                    font-size:nth($size ,3);                                        //20px
+                    @extend %pading-tbl;                                            //padding-top:20px, padding-bottom:20px, padding-left:20px;
                 }
                 p{
-                    font-family: nth($fonts, 1), nth($fonts,2);
-                    font-size:nth($size ,3);
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    padding-left: 20px;
+                    font-family: nth($fonts, 1), nth($fonts,2);                     //'Rubik', sans-serif;
+                    font-size:nth($size ,3);                                        //20px
+                    @extend %pading-tbl;                                            //padding-top:20px, padding-bottom:20px, padding-left:20px;
                 }
                 h3{
-                    font-family: nth($fonts, 1), nth($fonts,2);
-                    font-size:nth($size ,3);
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    padding-left: 20px;
+                    font-family: nth($fonts, 1), nth($fonts,2);                     //'Rubik', sans-serif;
+                    font-size:nth($size ,3);                                        //20px
+                    @extend %pading-tbl;                                            //padding-top:20px, padding-bottom:20px, padding-left:20px;
                 }
                 #logos-contacto{
-                    padding-left: 20px;
+                    @include flexible (flex, row, nowrap, space-evenly,stretch)     //display:flex, flex-flow:row nowrap, justify-content:space-evenly, align-items:stretch;
                 }
             }
+            //Media queries para todos los dispositivos
+            //Dispositivos pequeños
             @media screen and (min-width:250px) and (max-width:850px) {
-                    @include flexible (flex, column, nowrap,flex-start,stretch)
-                }
+                @include flexible (flex, column, nowrap,flex-start,stretch)         //display:flex, flex-flow:column nowrap, justify-content:flex-start, align-items:stretch;
+            }
             
         }
     }

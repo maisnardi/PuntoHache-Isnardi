@@ -7,24 +7,64 @@
 /* Inicio Header */
 
 header{
-    font-family: nth($fonts, 1), nth($fonts,2);
-    border-bottom: 10px solid nth($colores , 2);
+    font-family: nth($fonts, 1), nth($fonts,2);                 //'Rubik', sans-serif,
+    border-bottom: 10px solid nth($colores , 2);                //#88f2ef
+    //Color de fondo navbar
     .fondo-nav{
-        background-color:nth($colores, 3);
+        background-color:nth($colores, 3);                      //#F6F2D4
         .container-fluid{
+            .navbar-brand{
+                    img{
+                        //Media queries para todos los dispositivos
+                        //Dispositivos pequeños
+                        @media screen and (min-width:250px) and (max-width:350px){
+                        width: 200px;
+                        height: auto;
+                        }
+                    }    
+            }
             .navbar-collapse{
+                //Listas desordenada
                 .navbar-nav{
                     position: relative;
                     padding: 7px 0;
                     font-size: 1.3rem;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 0%;
+                        height: 3px;
+                        background: nth($colores , 1);
+                        transition: 0.4s ease-out; 
+                    }
+
+                    //Listas
                     .nav-item{
                         position: relative;
                         padding: 7px 0;
                         font-size: 1.3rem;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            width: 0%;
+                            height: 3px;
+                            background: nth($colores , 1);
+                            transition: 0.4s ease-out; 
+                        }
+                        &:hover::after{
+                            left: 0;
+                            width: 100%;
+                        }
                         .nav-link{
+                            //Media queries para todos los dispositivos
+                            //Dispositivos pequeños
                             @media screen and (min-width:250px) and (max-width:750px){
                                 padding-left: 10px;
-                                color: black;
+                                color:nth($colores,7 );     //black
                                 margin-right: 0;
                                 max-width: 200px;
                             }
@@ -34,27 +74,13 @@ header{
             }
 
         }
+        //Media queries para todos los dispositivos
+        //Dispositivos pequeños
         @media screen and (min-width:250px) and (max-width:750px){
             width: 100%;
             border-bottom: none;
         }
     }
-
-}
-
-.navbar-nav .nav-item::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0%;
-    height: 3px;
-    background: nth($colores , 1);
-    transition: 0.4s ease-out;
-}
-.navbar-nav .nav-item:hover::after {
-    left: 0;
-    width: 100%;
 }
 
 /* Fin Header */

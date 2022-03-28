@@ -6,72 +6,92 @@
 @import '../base/maps';
 
 /* Inicio Footer */
-
+//contenedor grid footer
 .grid-containerfooter{
-    background-color: nth($colores ,5);
-    font-family: nth($fonts, 1), nth($fonts,2);
+    background-color: nth($colores ,5);                 //rgba(229, 255, 205, 0.637)
+    font-family: nth($fonts, 1), nth($fonts,2);         //'Rubik', sans-serif
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+
+    //Logo del footer con link al index
     .logo-footer{
         padding-left: 15px;
         margin-top: 10px;
-
+        //Media queries para todos los dispositivos
+        //Dispositivos pequeños
         @media screen and (min-width:250px) and (max-width:850px) {
-        @include flexible(flex, row, nowrap,center, stretch);
+            @include flexible(flex, row, nowrap,center, stretch);       //display:flex, flex-flow:row nowrap, justify-content:center, align-items:stretch;
         }
     }
+    //Contenedor flex de dirección
     .flex-containerfooter{
         display: flex;
         flex-direction: column;
+        //Dirección y logo casa
         .texto-direccion{
-            @extend %flex-center;
+            @include flexible(flex, row, wrap, center, stretch);       //display:flex, flex-flow:row wrap, justify-content:center, align-items:stretch;
+            
             margin-top: 10px;
+            //Media queries para todos los dispositivos
+            //Dispositivos pequeños 
             @media screen and (min-width:250px) and (max-width:850px) {
                 margin-top: 20px;
             }
+            //Dirección
             .titulo-direccion{
                 padding-left: 15px;
             }
         }
+        //Iframe mapa footer
         .mapa-footer{
             @extend %flex-center;
             margin:10px 0;
         }
     }
+    //Contenedor flex Redes sociales
     .flex-containerfooter2{
-        @include flexible(flex, column, nowrap,flex-start, stretch);
+        @include flexible(flex, column, nowrap,flex-start, stretch);        //display:flex, flex-flow:column nowrap, justify-content:flex-start, align-items:stretch;
         margin-bottom: 20px;
-
+        //Media queries para todos los dispositivos
+        //Dispositivos pequeños
         @media screen and (min-width:250px) and (max-width:850px) {
             margin-top: 20px;
         }
+        //Título redes
         .titulo-redes{
             font-size: nth($size, 4);
             @extend %flex-center;
             margin-top: 10px;
         }
+        //Contenedor flex redes sociales
         .logo-redes{
-            @include flexible(flex, row, nowrap,space-evenly,center);
+            @include flexible(flex, row, nowrap,space-evenly,center);       //display:flex, flex-flow:row nowrap, justify-content:space-evenly, align-items:center;
             margin-top:20px;
+            //Imágen con link a Instagram
             .social-instagram{
                 text-decoration: none;
-                color: black;
-                @extend %flex-center;
+                color:nth($colores,7);          //black
+                @extend %flex-center;           //display: flex, justify-content: center, align-items: center;
+                //Logo Instagram
                 img{
                     padding-right: 5px;
                 }
             }
+            //Imágen con link a Facebook
             .social-facebook{
-                @extend %flex-center;
                 text-decoration: none;
-                color: black;
+                @extend %flex-center;           //display: flex, justify-content: center, align-items: center;
+                color:nth($colores,7);          //black
+                //Logo Facebook
                 img{
                     padding-right: 5px;
                 }
             }
         }
     }
+    //Media queries para todos los dispositivos
+    //Dispositivos pequeños
     @media screen and (min-width:250px) and (max-width:850px) {
         display: grid;
         grid-template-columns: auto;

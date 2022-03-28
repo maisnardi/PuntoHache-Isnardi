@@ -5,91 +5,114 @@
 @import '../base/mixin';
 @import '../base/maps';
 
-.grid-containernos{         //contenedor grid de todo el main de nosotros
-    @include gridmix(grid,center,center);
+//Container grid que maqueta todo el main del nosotros
+.grid-containernos{
+    @include gridmix(grid,center,center);       //display: grid, justify-items: center, align-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
-
+    
+    //Media queries para todos los dispositivos
+    //Dispositivos medianos
     @media screen and (min-width: 500px) and (max-width:900px) {
-            display: block;
-        }
-    .titulos-nosotros{      //titulo
-        font-family: nth($fonts, 1), nth($fonts, 2);
-        font-size: var($tamaño-titulos);
-        font-weight: map-get($estilo, peso);
-        padding-top: map-get($estilo, pd-top);
-        padding-left: map-get($estilo, pd-left);
-        padding-bottom: map-get($estilo, pd-bot);
-        grid-column: 1/3;
-        justify-self: map-get($estilo, jf-self);
-
-        @media screen and (min-width: 300px) and (max-width:499px) {
-                @include flexible(flex,row,nowrap,center, stretch);
-                font-size:nth($fonts,3 );
-                padding-left: 0;
-            }
-        @media screen and (min-width: 500px) and (max-width:900px) {
-                display: grid;
-                font-size: 27px;
-                @include flexible(flex,row,nowrap,center, center);
-            }
+        display: block;
     }
-    .imagen-nosotros{       //imagen
+    //Título nosotros    
+    .titulos-nosotros{
+        grid-column: 1/3;
+        font-family: nth($fonts, 1), nth($fonts, 2);        //'Rubik', sans-serif
+        font-size: var($tamaño-titulos);                    //45px
+        font-weight: map-get($estilo, peso);                //500
+        padding-top: map-get($estilo, pd-top);              //10px
+        padding-left: map-get($estilo, pd-left);            //20px
+        padding-bottom: map-get($estilo, pd-bot);           //10px
+        justify-self: map-get($estilo, jf-self);            //start
+
+        //Media queries para todos los dispositivos
+        //Dispositivos pequeños
+        @media screen and (min-width: 300px) and (max-width:499px) {
+            @include flexible(flex,row,nowrap,center, stretch);         //display:flex, flex-flow:row nowrap, justify-content:center, align-items:stretch;
+            font-size:nth($fonts,3 );                                   //20px
+            padding-left: 0;
+        }
+        //Dispositivos medianos
+        @media screen and (min-width: 500px) and (max-width:900px) {
+            display: grid;
+            font-size: 27px;
+            @include flexible(flex,row,nowrap,center, center);          //display:flex, flex-flow:row nowrap, justify-content:center, align-items:center;
+        }
+    }
+    //Imágenes nosotros
+    .imagen-nosotros{       
         padding-bottom: 20px;
         padding-left: 10px;
         max-width: 70%;
             img{
                 border-radius: 20px;
             }
+        
+        //Media queries para todos los dispositivos
+        //Dispositivos pequeños
         @media screen and (min-width: 300px) and (max-width:499px) {
-                max-width: 90%;
-                height: auto;
-                padding-bottom: 5px;
-                margin:auto
-            }
+            max-width: 90%;
+            height: auto;
+            padding-bottom: 5px;
+            margin:auto
+        }
+        //Dispositivos medianos
         @media screen and (min-width: 500px) and (max-width:900px) {
-                max-width: 70%;
-                height: auto;
-                margin:auto;
-                @include flexible(flex,row,nowrap,center, center);
-            }
+            max-width: 70%;
+            height: auto;
+            margin:auto;
+            @include flexible(flex,row,nowrap,center, center);          //display:flex, flex-flow:row nowrap, justify-content:center, align-items:center;
+        }
     }
-    .texto-nosotros{        //texto
+    //Texto nosotros
+    .texto-nosotros{       
         padding-left: 20px;
         font-style: italic;
         .textos-nosotros{
-            font-family: nth($fonts, 3), nth($fonts, 4);
-            font-size: nth($size, 5);
+            font-family: nth($fonts, 3), nth($fonts, 4);        //'EB Garamond', serif 
+            font-size: nth($size, 5);                           //30px
             font-weight: 500;
             padding-right: 100px;
+            
+            //Media queries para todos los dispositivos
+            //Dispositivos pequeños
             @media screen and (min-width: 300px) and (max-width:499px) {
-                    display: flex;
-                    font-size: nth($size, 3);
-                    padding-bottom: 10px;
-                    text-align: center;
-                    padding-right: 10px; 
-                }
-            @media screen and (min-width: 500px) and (max-width:900px) {
-                    font-size: nth($size ,3);
-                    padding-bottom: 10px;
-                    text-align: center;
-                    justify-content: center;
-                    padding-left: 70px;
-                }
-                @media screen and (min-width: 901px) and (max-width:1300px) {
-                    font-size: nth($size ,3);
-                    padding-bottom: 10px;
-                    padding-left: 70px;
-                }                
-        }
-        @media screen and (min-width: 500px) and (max-width:900px) {
-                @include flexible(flex,row,nowrap,center, center);
+                display: flex;
+                font-size: nth($size, 3);                       //20px
+                padding-bottom: 10px;
+                text-align: center;
+                padding-right: 10px; 
             }
+            //Dispositivos medianos
+            @media screen and (min-width: 500px) and (max-width:900px) {
+                font-size: nth($size ,3);                        //20px
+                padding-bottom: 10px;
+                text-align: center;
+                justify-content: center;
+                padding-left: 70px;
+            }
+            //Dispositivos grandes
+            @media screen and (min-width: 901px) and (max-width:1300px) {
+                font-size: nth($size ,3);                       //20px
+                padding-bottom: 10px;
+                padding-left: 70px;
+            }                
+        }
+        //Media queries para todos los dispositivos
+        //Dispositivos medianos
+        @media screen and (min-width: 500px) and (max-width:900px) {
+            @include flexible(flex,row,nowrap,center, center);      //display:flex, flex-flow:row nowrap, justify-content:center, align-items:center;
+        }
 
     }
+    //Media queries para todos los dispositivos
+    //Dispositivos pequeños    
     @media screen and (min-width: 300px) and (max-width:499px) {
-            display: block;
-        }
+        display: block;
+    }
+    //Dispositivos grandes
     @media screen and (min-width:901px) and (max-width:1300px) {
         grid-template-columns: 1fr 2fr;
         grid-template-rows: auto 1fr;

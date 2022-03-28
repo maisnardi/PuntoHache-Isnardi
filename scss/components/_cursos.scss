@@ -5,62 +5,72 @@
 @import '../base/mixin';
 @import '../base/maps';
 
-.grid-containercursos{      //contenedor de todo el main de cursos
-    @include gridmix(grid,center,start);
+//Container grid que maqueta todo el main de cursos
+.grid-containercursos{
+    @include gridmix(grid,center,start);                //display: grid, justify-items: center, align-items:start
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    .titulos-cursos{        //titulo de la página
-        font-family:nth($fonts, 1), nth($fonts,2);
-        font-size: nth($size, 5);
-        padding-top: map-get($padding-20, pd-top);
-        padding-bottom: map-get($padding-20, pd-bot);
-        padding-left: map-get($padding-20, pd-left);
+    
+    //Título de la página
+    .titulos-cursos{        
+        font-family:nth($fonts, 1), nth($fonts,2);      //'Rubik' , sans-serif
+        font-size: nth($size, 5);                       //30px
+        padding-top: map-get($padding-20, pd-top);      //20px
+        padding-bottom: map-get($padding-20, pd-bot);   //20px
+        padding-left: map-get($padding-20, pd-left);    //20px
 
-        @media  screen and (min-width:300px) and (max-width:480px) {
-            font-size: var($tamaño-mobilesmall);
-            text-align: center;
-        }
-        @media  screen and (min-width:481px) and (max-width:900px) {
-            font-size: var($tamaño-mobilesmall);
+        //Media queries para todos los dispositivos
+        //Dispositivos pequeños y medianos
+        @media  screen and (min-width:300px) and (max-width:900px) {
+            font-size: var($tamaño-mobilesmall);        //20px
             text-align: center;
         }
     }
-    .tabla-cursos{          //tabla de cursos disponibles
+
+    //Tabla de cursos disponibles
+    .tabla-cursos{          
         width: 90%;
         margin: 0 auto;
-        border: 1px solid nth($colores, 2);
+        border: 1px solid nth($colores, 2);             //color #88f2ef
         border-spacing: 0;
-        background-color:nth($colores, 4);
-        color: nth($colores ,3);
-        font-family:nth($fonts, 1), nth($fonts,2);
+        background-color:nth($colores, 4);              //color #22577E
+        color: nth($colores ,3);                        //color #F6F2D4
+        font-family:nth($fonts, 1), nth($fonts,2);      //'Rubik',sans-serif
         
+        //Títulos de la tabla
         .titulos-tablas{
             text-align: center;
-            width: 25%;
             vertical-align: top;
-            border: 1px solid nth($colores, 6);
+            width: 25%;
+            border: 1px solid nth($colores, 6);         //color #95D1CC
             border-collapse: collapse;
             padding: 10px;
         }
+        //Media queries para todos los dispositivos
+        //Dispositivos pequeños
         @media  screen and (min-width:300px) and (max-width:480px) {
             font-size: 10px;
         }
     }   
 }
-td{
-    width: 25%;
-    text-align: left;
-    vertical-align: top;
-    border: 1px solid nth($colores, 6);
-    border-collapse: collapse;
-    padding: 10px;
+tr{
+    td{
+        width: 25%;
+        text-align: left;
+        vertical-align: top;
+        border: 1px solid nth($colores, 6);                 //color #95D1CC 
+        border-collapse: collapse;
+        padding: 10px;
+    }
 }
 
-.contenedor-carousel{       //carousel de 3 imagenes
-    max-width: 40%;
+
+//Contenedor carousel de 3 imágenes
+.contenedor-carousel{       
+    max-width: 30%;
     height: auto;
     margin: auto;
-    padding:30px 0;
+    padding: 30px 0;
 
     .carousel-inner{
         .carousel-item{
@@ -69,19 +79,14 @@ td{
             }
         }
     }
-   
-    @media  screen and (min-width:300px) and (max-width:480px) {
+    //Media queries para todos los dispositivos
+    //Dispositivos pequeños   
+    @media  screen and (min-width:300px) and (max-width:900px) {
         max-width: 90%;
         height: auto;
         margin: auto;
         padding:30px 0;
     }
-    @media  screen and (min-width:481px) and (max-width:900px) {
-        max-width: 90%;
-        height: auto;
-        margin: auto;
-        padding:30px 0;
-    } 
 }
 
 /*Fin de Cursos.html*/

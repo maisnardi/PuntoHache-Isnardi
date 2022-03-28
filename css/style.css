@@ -5,7 +5,7 @@
 /* Variables */
 /* Listas */
 /* Extends */
-.grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter .mapa-footer, .grid-containerfooter .flex-containerfooter .texto-direccion, body main .grid-containerind .container-index2, body main .grid-containerind .container-index1 {
+.grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter .mapa-footer, body main .grid-containerind .container-index2, body main .grid-containerind .container-index1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,6 +13,12 @@
 
 body main .grid-containerind .container-index2, body main .grid-containerind .container-index1 {
   margin: 0 auto;
+}
+
+main .container-contacto .row .datos p, main .container-contacto .row .datos h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
 
 /* Mixin */
@@ -21,7 +27,7 @@ body main .grid-containerind .container-index2, body main .grid-containerind .co
 /* Listas */
 /* Variables */
 /* Extends */
-.grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter .mapa-footer, .grid-containerfooter .flex-containerfooter .texto-direccion, body main .grid-containerind .container-index2, body main .grid-containerind .container-index1 {
+.grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter .mapa-footer, body main .grid-containerind .container-index2, body main .grid-containerind .container-index1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,6 +35,12 @@ body main .grid-containerind .container-index2, body main .grid-containerind .co
 
 body main .grid-containerind .container-index2, body main .grid-containerind .container-index1 {
   margin: 0 auto;
+}
+
+main .container-contacto .row .datos p, main .container-contacto .row .datos h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
 
 /* Mixin */
@@ -41,15 +53,45 @@ header {
 header .fondo-nav {
   background-color: #F6F2D4;
 }
+@media screen and (min-width: 250px) and (max-width: 350px) {
+  header .fondo-nav .container-fluid .navbar-brand img {
+    width: 200px;
+    height: auto;
+  }
+}
 header .fondo-nav .container-fluid .navbar-collapse .navbar-nav {
   position: relative;
   padding: 7px 0;
   font-size: 1.3rem;
 }
+header .fondo-nav .container-fluid .navbar-collapse .navbar-nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background: #5584AC;
+  transition: 0.4s ease-out;
+}
 header .fondo-nav .container-fluid .navbar-collapse .navbar-nav .nav-item {
   position: relative;
   padding: 7px 0;
   font-size: 1.3rem;
+}
+header .fondo-nav .container-fluid .navbar-collapse .navbar-nav .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background: #5584AC;
+  transition: 0.4s ease-out;
+}
+header .fondo-nav .container-fluid .navbar-collapse .navbar-nav .nav-item:hover::after {
+  left: 0;
+  width: 100%;
 }
 @media screen and (min-width: 250px) and (max-width: 750px) {
   header .fondo-nav .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link {
@@ -66,28 +108,12 @@ header .fondo-nav .container-fluid .navbar-collapse .navbar-nav .nav-item {
   }
 }
 
-.navbar-nav .nav-item::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0%;
-  height: 3px;
-  background: #5584AC;
-  transition: 0.4s ease-out;
-}
-
-.navbar-nav .nav-item:hover::after {
-  left: 0;
-  width: 100%;
-}
-
 /* Fin Header */
 /* Index */
 /* Listas */
 /* Variables */
 /* Extends */
-.grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter .mapa-footer, .grid-containerfooter .flex-containerfooter .texto-direccion, body main .grid-containerind .container-index2, body main .grid-containerind .container-index1 {
+.grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter .mapa-footer, body main .grid-containerind .container-index2, body main .grid-containerind .container-index1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,6 +121,12 @@ header .fondo-nav .container-fluid .navbar-collapse .navbar-nav .nav-item {
 
 body main .grid-containerind .container-index2, body main .grid-containerind .container-index1 {
   margin: 0 auto;
+}
+
+main .container-contacto .row .datos p, main .container-contacto .row .datos h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
 
 /* Mixin */
@@ -105,7 +137,7 @@ body {
 body main .grid-containerind {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
 }
 body main .grid-containerind .texto-titulo {
   grid-column: 1/3;
@@ -123,10 +155,10 @@ body main .grid-containerind .texto-titulo h1 {
   }
 }
 body main .grid-containerind .container-index1 {
+  grid-column: 1/3;
   font-family: "Rubik", sans-serif;
   font-size: 35px;
   width: 90%;
-  grid-column: 1/3;
 }
 body main .grid-containerind .container-index1 .imagenes-index {
   border-radius: 20px;
@@ -190,11 +222,10 @@ body main .grid-containerind .container-index1 .textos-index {
   }
 }
 body main .grid-containerind .container-index2 {
+  grid-column: 1/3;
   font-family: "Rubik", sans-serif;
   font-size: 35px;
   width: 90%;
-  padding-bottom: 20px;
-  grid-column: 1/3;
 }
 body main .grid-containerind .container-index2 .textos-index {
   padding-left: 20px;
@@ -220,6 +251,7 @@ body main .grid-containerind .container-index2 .imagenes-index {
   border-radius: 20px;
   max-width: 30%;
   height: auto;
+  padding-left: 10px;
 }
 @media screen and (min-width: 300px) and (max-width: 500px) {
   body main .grid-containerind .container-index2 .imagenes-index {
@@ -246,6 +278,7 @@ body main .grid-containerind .container-index2 .imagenes-index {
     flex-flow: column-reverse nowrap;
     justify-content: flex-start;
     align-items: stretch;
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width: 501px) and (max-width: 700px) {
@@ -256,8 +289,28 @@ body main .grid-containerind .container-index2 .imagenes-index {
     align-items: stretch;
   }
 }
+body main .grid-containerind .link-cursos {
+  font-family: "Rubik", sans-serif;
+  font-size: 35px;
+  grid-column: 1/3;
+  text-align: center;
+  margin: 40px 0;
+}
+body main .grid-containerind .link-cursos:hover {
+  color: #22577E;
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  body main .grid-containerind .link-cursos {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 700px) {
+  body main .grid-containerind .link-cursos {
+    font-size: 25px;
+  }
+}
 body main .grid-containerind .container-videos {
-  margin-top: 20px;
+  margin: 20px 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
@@ -276,36 +329,27 @@ body main .grid-containerind .container-videos .video-index {
     margin-bottom: 10px;
   }
 }
-@media screen and (min-width: 501px) and (max-width: 700px) {
+@media screen and (min-width: 501px) and (max-width: 850px) {
   body main .grid-containerind .container-videos .video-index {
-    width: 90%;
+    width: 70%;
     max-height: auto;
     margin: 0 auto;
     margin-bottom: 10px;
   }
 }
-@media screen and (min-width: 701px) and (max-width: 850px) {
-  body main .grid-containerind .container-videos .video-index {
-    width: 90%;
-    max-height: auto;
-    margin: 0 auto;
-    margin-bottom: 10px;
-  }
-}
-@media screen and (min-width: 300px) and (max-width: 500px) {
+@media screen and (min-width: 300px) and (max-width: 850px) {
   body main .grid-containerind .container-videos {
     flex-direction: column;
   }
 }
-@media screen and (min-width: 501px) and (max-width: 700px) {
-  body main .grid-containerind .container-videos {
-    flex-direction: column;
+@media screen and (min-width: 300px) and (max-width: 850px) {
+  body main .grid-containerind .container-videos .video-desktop {
+    display: none;
   }
 }
-@media screen and (min-width: 701px) and (max-width: 850px) {
-  body main .grid-containerind .container-videos {
-    flex-direction: column;
-  }
+
+.disclaimer {
+  display: none;
 }
 
 /* Fin main */
@@ -313,7 +357,7 @@ body main .grid-containerind .container-videos .video-index {
 /* Listas */
 /* Variables */
 /* Extends */
-.grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter .mapa-footer, .grid-containerfooter .flex-containerfooter .texto-direccion, body main .grid-containerind .container-index1, body main .grid-containerind .container-index2 {
+.grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter .mapa-footer, body main .grid-containerind .container-index1, body main .grid-containerind .container-index2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,6 +365,12 @@ body main .grid-containerind .container-videos .video-index {
 
 body main .grid-containerind .container-index1, body main .grid-containerind .container-index2 {
   margin: 0 auto;
+}
+
+main .container-contacto .row .datos p, main .container-contacto .row .datos h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
 
 /* Mixin */
@@ -350,6 +400,10 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
   flex-direction: column;
 }
 .grid-containerfooter .flex-containerfooter .texto-direccion {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
   margin-top: 10px;
 }
 @media screen and (min-width: 250px) and (max-width: 850px) {
@@ -413,7 +467,7 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
 /* Listas */
 /* Variables */
 /* Extends */
-body main .grid-containerind .container-index1, body main .grid-containerind .container-index2, .grid-containerfooter .flex-containerfooter .texto-direccion, .grid-containerfooter .flex-containerfooter .mapa-footer, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook {
+body main .grid-containerind .container-index1, body main .grid-containerind .container-index2, .grid-containerfooter .flex-containerfooter .mapa-footer, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -421,6 +475,12 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
 
 body main .grid-containerind .container-index1, body main .grid-containerind .container-index2 {
   margin: 0 auto;
+}
+
+main .container-contacto .row .datos p, main .container-contacto .row .datos h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
 
 /* Mixin */
@@ -439,13 +499,7 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
   padding-bottom: 20px;
   padding-left: 20px;
 }
-@media screen and (min-width: 300px) and (max-width: 480px) {
-  .grid-containercursos .titulos-cursos {
-    font-size: var(20px);
-    text-align: center;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 900px) {
+@media screen and (min-width: 300px) and (max-width: 900px) {
   .grid-containercursos .titulos-cursos {
     font-size: var(20px);
     text-align: center;
@@ -462,8 +516,8 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
 }
 .grid-containercursos .tabla-cursos .titulos-tablas {
   text-align: center;
-  width: 25%;
   vertical-align: top;
+  width: 25%;
   border: 1px solid #95D1CC;
   border-collapse: collapse;
   padding: 10px;
@@ -474,7 +528,7 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
   }
 }
 
-td {
+tr td {
   width: 25%;
   text-align: left;
   vertical-align: top;
@@ -484,7 +538,7 @@ td {
 }
 
 .contenedor-carousel {
-  max-width: 40%;
+  max-width: 30%;
   height: auto;
   margin: auto;
   padding: 30px 0;
@@ -492,15 +546,7 @@ td {
 .contenedor-carousel .carousel-inner .carousel-item img {
   border-radius: 20px;
 }
-@media screen and (min-width: 300px) and (max-width: 480px) {
-  .contenedor-carousel {
-    max-width: 90%;
-    height: auto;
-    margin: auto;
-    padding: 30px 0;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 900px) {
+@media screen and (min-width: 300px) and (max-width: 900px) {
   .contenedor-carousel {
     max-width: 90%;
     height: auto;
@@ -514,7 +560,7 @@ td {
 /* Listas */
 /* Variables */
 /* Extends */
-body main .grid-containerind .container-index1, body main .grid-containerind .container-index2, .grid-containerfooter .flex-containerfooter .texto-direccion, .grid-containerfooter .flex-containerfooter .mapa-footer, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook {
+body main .grid-containerind .container-index1, body main .grid-containerind .container-index2, .grid-containerfooter .flex-containerfooter .mapa-footer, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -524,13 +570,19 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
   margin: 0 auto;
 }
 
+main .container-contacto .row .datos p, main .container-contacto .row .datos h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
 /* Mixin */
 /* Maps */
 .grid-containerconsul {
   display: grid;
   justify-items: start;
   align-items: center;
-  grid-template-columns: 1 fr 1fr;
+  grid-template-columns: 1 1fr;
   grid-template-rows: repeat(3 auto);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
@@ -553,7 +605,7 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
     padding-top: 10px;
   }
 }
-@media screen and (min-width: 451px) and (max-width: 700px) {
+@media screen and (min-width: 451px) and (max-width: 710px) {
   .grid-containerconsul .titulo-consultoria {
     font-size: var(20px);
     justify-self: center;
@@ -561,7 +613,7 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
     grid-row: 1/2;
   }
 }
-@media screen and (min-width: 701px) and (max-width: 1000px) {
+@media screen and (min-width: 711px) and (max-width: 1000px) {
   .grid-containerconsul .titulo-consultoria {
     font-size: var(35px);
   }
@@ -582,12 +634,18 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
     height: auto;
   }
 }
-@media screen and (min-width: 451px) and (max-width: 700px) {
+@media screen and (min-width: 451px) and (max-width: 710px) {
   .grid-containerconsul .imagen-consul1 {
     grid-column: 1/2;
     grid-row: 2/3;
     padding-left: 3px;
     width: 200px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 711px) and (max-width: 1000px) {
+  .grid-containerconsul .imagen-consul1 {
+    width: 300px;
     height: auto;
   }
 }
@@ -607,7 +665,7 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
     padding-top: 10px;
   }
 }
-@media screen and (min-width: 451px) and (max-width: 700px) {
+@media screen and (min-width: 451px) and (max-width: 710px) {
   .grid-containerconsul .textos-consultoria {
     display: grid;
     justify-items: center;
@@ -619,7 +677,7 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
     padding-top: 10px;
   }
 }
-@media screen and (min-width: 701px) and (max-width: 1000px) {
+@media screen and (min-width: 711px) and (max-width: 1000px) {
   .grid-containerconsul .textos-consultoria {
     font-size: 20px;
   }
@@ -640,12 +698,18 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
     height: auto;
   }
 }
-@media screen and (min-width: 451px) and (max-width: 700px) {
+@media screen and (min-width: 451px) and (max-width: 710px) {
   .grid-containerconsul .imagen-consul2 {
     grid-column: 2/3;
     grid-row: 2/3;
     padding-left: 0;
     width: 200px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 711px) and (max-width: 1000px) {
+  .grid-containerconsul .imagen-consul2 {
+    width: 300px;
     height: auto;
   }
 }
@@ -672,7 +736,7 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
     padding-top: 20px;
   }
 }
-@media screen and (min-width: 451px) and (max-width: 700px) {
+@media screen and (min-width: 451px) and (max-width: 710px) {
   .grid-containerconsul .contenedor-consultoria {
     display: flex;
     flex-flow: column nowrap;
@@ -685,7 +749,7 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
     padding-top: 20px;
   }
 }
-@media screen and (min-width: 701px) and (max-width: 1000px) {
+@media screen and (min-width: 711px) and (max-width: 1000px) {
   .grid-containerconsul .contenedor-consultoria {
     font-size: 20px;
   }
@@ -695,7 +759,7 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
     padding-left: 15px;
   }
 }
-@media screen and (min-width: 451px) and (max-width: 700px) {
+@media screen and (min-width: 451px) and (max-width: 710px) {
   .grid-containerconsul .contenedor-consultoria .titulo2-consultoria {
     padding-left: 15px;
   }
@@ -713,17 +777,17 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    padding-bottom: 20px;
+    padding: 10px 0px 5px 0px;
   }
 }
-@media screen and (min-width: 451px) and (max-width: 700px) {
+@media screen and (min-width: 451px) and (max-width: 710px) {
   .grid-containerconsul .contenedor-consultoria .clientes-consultoria {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: stretch;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
 }
 @media screen and (min-width: 250px) and (max-width: 450px) {
@@ -731,17 +795,17 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: 1 fr 1fr;
+    grid-template-columns: 1 1fr;
     grid-template-rows: repeat(5 auto);
     grid-row-gap: 5px;
   }
 }
-@media screen and (min-width: 451px) and (max-width: 700px) {
+@media screen and (min-width: 451px) and (max-width: 710px) {
   .grid-containerconsul {
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: 1 fr 1fr;
+    grid-template-columns: 1 1fr;
     grid-template-rows: repeat(5 auto);
     grid-row-gap: 5px;
   }
@@ -752,7 +816,7 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
 /* Listas */
 /* Variables */
 /* Extends */
-body main .grid-containerind .container-index1, body main .grid-containerind .container-index2, .grid-containerfooter .flex-containerfooter .texto-direccion, .grid-containerfooter .flex-containerfooter .mapa-footer, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook {
+body main .grid-containerind .container-index1, body main .grid-containerind .container-index2, .grid-containerfooter .flex-containerfooter .mapa-footer, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -762,59 +826,53 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
   margin: 0 auto;
 }
 
+main .container-contacto .row .datos p, main .container-contacto .row .datos h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
 /* Mixin */
 /* Maps */
 /* Inicio Contacto */
-main section {
+main .container-contacto {
   margin-bottom: 10px;
 }
-main section section section form {
+main .container-contacto .row .col form {
   border-radius: 20px;
   margin-top: 15px;
   padding: 20px;
   background-color: #F6F2D4;
   border: 2px solid black;
 }
-main section section section h3 {
+main .container-contacto .row .datos h3 {
   font-family: "Rubik", sans-serif;
   font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
 }
-main section section section p {
+main .container-contacto .row .datos p {
   font-family: "Rubik", sans-serif;
   font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
 }
-main section section section h3 {
+main .container-contacto .row .datos h3 {
   font-family: "Rubik", sans-serif;
   font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
 }
-main section section section p {
+main .container-contacto .row .datos p {
   font-family: "Rubik", sans-serif;
   font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
 }
-main section section section h3 {
+main .container-contacto .row .datos h3 {
   font-family: "Rubik", sans-serif;
   font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
 }
-main section section section #logos-contacto {
-  padding-left: 20px;
+main .container-contacto .row .datos #logos-contacto {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: stretch;
 }
 @media screen and (min-width: 250px) and (max-width: 850px) {
-  main section section {
+  main .container-contacto .row {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -827,7 +885,7 @@ main section section section #logos-contacto {
 /* Listas */
 /* Variables */
 /* Extends */
-body main .grid-containerind .container-index1, body main .grid-containerind .container-index2, .grid-containerfooter .flex-containerfooter .texto-direccion, .grid-containerfooter .flex-containerfooter .mapa-footer, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook {
+body main .grid-containerind .container-index1, body main .grid-containerind .container-index2, .grid-containerfooter .flex-containerfooter .mapa-footer, .grid-containerfooter .flex-containerfooter2 .titulo-redes, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-instagram, .grid-containerfooter .flex-containerfooter2 .logo-redes .social-facebook {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -835,6 +893,12 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
 
 body main .grid-containerind .container-index1, body main .grid-containerind .container-index2 {
   margin: 0 auto;
+}
+
+main .container-contacto .row .datos h3, main .container-contacto .row .datos p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
 
 /* Mixin */
@@ -852,13 +916,13 @@ body main .grid-containerind .container-index1, body main .grid-containerind .co
   }
 }
 .grid-containernos .titulos-nosotros {
+  grid-column: 1/3;
   font-family: "Rubik", sans-serif;
   font-size: var(45px);
   font-weight: 500;
   padding-top: 10px;
   padding-left: 20px;
   padding-bottom: 10px;
-  grid-column: 1/3;
   justify-self: start;
 }
 @media screen and (min-width: 300px) and (max-width: 499px) {
